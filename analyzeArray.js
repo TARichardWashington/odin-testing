@@ -1,5 +1,9 @@
 export default function analyzeArray(arrayToBeAnalyzed) {
 
+    if (!Array.isArray(arrayToBeAnalyzed)) {
+        throw new TypeError('Array required to be analyzed but an ' + typeof (arrayToBeAnalyzed) + ' passed');
+    }
+
     let average = (arrayToBeAnalyzed.reduce((accumulator, current) => {
         return accumulator + current;
     }, 0)) / arrayToBeAnalyzed.length;
