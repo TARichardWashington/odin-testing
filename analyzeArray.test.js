@@ -6,6 +6,9 @@ test('Array returns correct average', () => {
     expect(analyzedArray.average).toBe(4);
 });
 
+test('Array returns correct minimum', () => {
+    expect(analyzedArray.min).toBe(1);
+});
 
 test('Only an array can be passed to analyzeArray', () => {
     expect(() =>
