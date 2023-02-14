@@ -15,7 +15,7 @@ test('Array returns correct maximum', () => {
 });
 
 test('Array returns correct length', () => {
-    expect(analyzedArray.length).toBe(8);
+    expect(analyzedArray.length).toBe(6);
 });
 
 test('Only an array can be passed to analyzeArray', () => {

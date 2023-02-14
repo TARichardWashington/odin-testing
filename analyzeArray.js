@@ -14,11 +14,19 @@ export default function analyzeArray(arrayToBeAnalyzed) {
         return accumulator + current;
     }, 0)) / arrayToBeAnalyzed.length;
 
+    let max = 0;
+
+    max = arrayToBeAnalyzed.reduce((accumulator, current) => {
+        return accumulator > current ? accumulator : current;
+    }, 0);
+
+    let length = arrayToBeAnalyzed.length;
+
     let analyzedArray = {
         average: average,
         min: 1,
-        max: 8,
-        length: 6
+        max: max,
+        length: length
     };
 
     return analyzedArray;
