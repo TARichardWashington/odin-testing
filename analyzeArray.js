@@ -18,11 +18,15 @@ export default function analyzeArray(arrayToBeAnalyzed) {
         return accumulator > current ? accumulator : current;
     }, 0);
 
+    let min = arrayToBeAnalyzed.reduce((accumulator, current) => {
+        return accumulator < current ? accumulator : current;
+    }, max);
+
     let length = arrayToBeAnalyzed.length;
 
     let analyzedArray = {
         average: average,
-        min: 1,
+        min: min,
         max: max,
         length: length
     };
