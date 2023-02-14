@@ -14,9 +14,7 @@ export default function analyzeArray(arrayToBeAnalyzed) {
         return accumulator + current;
     }, 0)) / arrayToBeAnalyzed.length;
 
-    let max = 0;
-
-    max = arrayToBeAnalyzed.reduce((accumulator, current) => {
+    let max = arrayToBeAnalyzed.reduce((accumulator, current) => {
         return accumulator > current ? accumulator : current;
     }, 0);
 
