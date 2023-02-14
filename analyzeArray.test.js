@@ -10,6 +10,10 @@ test('Array returns correct minimum', () => {
     expect(analyzedArray.min).toBe(1);
 });
 
+test('Array returns correct maximum', () => {
+    expect(analyzedArray.max).toBe(8);
+});
+
 test('Only an array can be passed to analyzeArray', () => {
     expect(() =>
         analyzeArray('octopus')
